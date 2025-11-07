@@ -8,7 +8,7 @@ public class CuentaBancaria {
         this.saldo = saldo;
         this.titular = titular;
     }
-
+//get y set de salfo
     public int getSaldo() {
         return saldo;
     }
@@ -16,7 +16,7 @@ public class CuentaBancaria {
     public void setSaldo(int saldo) {
         this.saldo = saldo;
     }
-
+//get y set de titular
     public String getTitular() {
         return titular;
     }
@@ -24,15 +24,15 @@ public class CuentaBancaria {
     public void setTitular(String titular) {
         this.titular = titular;
     }
-
+//metodo que muestra la informacio, es cambiado por la clase Cuenta 1
     public void informacion(){
         System.out.println("No hay datos");
     }
-
+    //metodo que retira dinero de la cuenta, es cambiado por la clase Cuenta 1
     public void retirar(int dinero){
         System.out.println("No hay dinero");
     }
-
+    //metodo que deposita dinero el na cuenta, es cambiado por la clase Cuenta 1
     public void meter(int dinero){
         System.out.println("No hay cuenta");
     }
@@ -41,6 +41,7 @@ public class CuentaBancaria {
         CuentaBancaria cuenta1=new Cuenta1(0, "Hugo");
         Scanner sc=new Scanner(System.in);
         int l=0;
+        //este bucle permite hacer los metodos mas de 1 vez
         do {
             cuenta1.informacion();
             int decision;
@@ -60,6 +61,8 @@ public class CuentaBancaria {
             if (decision == 3) {
                 l=1;
                 System.out.println("Cuenta cerrada, ¡hasta la próxima!");
+            }else{
+                System.out.println("No es una acción posible");
             }
         }while (l==0);
     }
